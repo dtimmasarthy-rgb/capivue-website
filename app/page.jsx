@@ -1,168 +1,280 @@
-import Mockup from "../components/Mockup";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-[#F8FAFC]">
       
-      {/* HERO SECTION */}
-      <section className="flex flex-col items-center justify-center text-center px-6 pt-32 pb-24 relative overflow-hidden">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0EA5E9]/5 rounded-full blur-[120px] pointer-events-none" />
+      {/* 1. HERO SECTION */}
+      <section className="pt-24 pb-16 px-6 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0EA5E9]/10 rounded-full blur-[120px] pointer-events-none" />
         
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[#1E40AF] text-xs font-semibold uppercase tracking-wider mb-8">
-          <span className="w-2 h-2 rounded-full bg-[#0EA5E9]" />
-          Enterprise Intelligence Platform
-        </div>
-
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight max-w-4xl leading-[1.1] relative z-10">
-          Win the bid <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E40AF] to-[#0EA5E9]">
-            before you write it.
-          </span>
-        </h1>
-
-        <p className="mt-8 text-lg md:text-xl text-slate-600 max-w-2xl relative z-10 leading-relaxed">
-          Turn complex RFPs and fragmented knowledge into an evidence-backed response strategy, a controlled proposal blueprint, and review-ready deliverables.
-        </p>
-
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 relative z-10 w-full sm:w-auto">
-          <Link href="/request-demo" className="bg-[#1E40AF] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-900 transition-all shadow-lg shadow-[#1E40AF]/20 text-center">
-            Book a Demo
-          </Link>
-          <Link href="/platform" className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-50 transition-all text-center">
-            See How It Works
-          </Link>
-        </div>
-                {/* Add the Mockup right here */}
-        <Mockup />
-      </section>
-
-      {/* SOCIAL PROOF STRIP */}
-      <section className="border-y border-slate-200 bg-white py-8">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-sm font-medium text-slate-500 mb-6 uppercase tracking-wider">
-            Built for the security and compliance requirements of modern enterprise bid teams
-          </p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale">
-            <span className="text-lg font-bold tracking-tight text-slate-800">Azure Cloud</span>
-            <span className="text-lg font-bold tracking-tight text-slate-800">SOC 2 Type I (In Progress)</span>
-            <span className="text-lg font-bold tracking-tight text-slate-800">Row-Level Security</span>
-            <span className="text-lg font-bold tracking-tight text-slate-800">Zero Data Retention</span>
-          </div>
-        </div>
-      </section>
-
-      {/* METRICS BAND */}
-      <section className="bg-[#F8FAFC]">
-        <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-200 text-center">
-          <div className="flex flex-col items-center justify-center pt-4 md:pt-0">
-            <span className="text-4xl font-extrabold text-[#1E40AF] tracking-tight">80%</span>
-            <span className="mt-2 text-sm font-medium text-slate-500 uppercase tracking-wider">Faster first draft</span>
-          </div>
-          <div className="flex flex-col items-center justify-center pt-8 md:pt-0">
-            <span className="text-4xl font-extrabold text-[#1E40AF] tracking-tight">3x</span>
-            <span className="mt-2 text-sm font-medium text-slate-500 uppercase tracking-wider">Bid throughput per seat</span>
-          </div>
-          <div className="flex flex-col items-center justify-center pt-8 md:pt-0">
-            <span className="text-4xl font-extrabold text-[#1E40AF] tracking-tight">+12 pt</span>
-            <span className="mt-2 text-sm font-medium text-slate-500 uppercase tracking-wider">Average win rate improvement</span>
-          </div>
-        </div>
-      </section>
-
-      {/* THE 3 PILLARS */}
-      <section className="py-24 px-6 max-w-7xl mx-auto bg-white border-y border-slate-200">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0B1220]">
-            Not just faster drafting. Better decisions.
-          </h2>
-          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-            The market is crowded with RFP automation tools. Capivue differentiates on the intelligence that happens before and after the document is written.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-8 rounded-2xl border border-slate-200 hover:border-[#1E40AF]/30 transition-colors bg-[#F8FAFC]">
-            <h3 className="text-xl font-bold text-[#0B1220] mb-3">Bid Decision Intelligence</h3>
-            <p className="text-slate-600 leading-relaxed text-sm">
-              Before you write a single word, Capivue tells you whether to bid at all. Score the bid (Bid Strength Score /100), generate win themes, and produce a section-level strategy blueprint grounded in the RFP's actual requirements.
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          
+          {/* Left: Text */}
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[#1E40AF] text-xs font-semibold uppercase tracking-wider mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#0EA5E9]" />
+              Enterprise Bid Intelligence Infrastructure
+            </div>
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-[#0B1220] leading-[1.1] mb-6">
+              Win the bid before <br className="hidden lg:block"/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E40AF] to-[#0EA5E9]">
+                you write a single word.
+              </span>
+            </h1>
+            <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+              Capivue turns 300-page RFPs, SOWs, and commercial schedules into an audited risk register, a margin-protected pricing model, and an evidence-backed submission—in hours, not weeks.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <Link href="/request-demo" className="bg-[#1E40AF] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-900 transition-all shadow-lg shadow-[#1E40AF]/20 text-center">
+                Request Enterprise Demo
+              </Link>
+              <button className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+                <svg className="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                Explore Walkthrough
+              </button>
+            </div>
+            {/* Micro-Trust Line */}
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium text-slate-500">
+              <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> Deployed on Microsoft Azure Central India</span>
+              <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> PostgreSQL Row-Level Security</span>
+              <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> Zero-Retention AI</span>
+            </div>
           </div>
-          <div className="p-8 rounded-2xl border border-slate-200 hover:border-[#1E40AF]/30 transition-colors bg-[#F8FAFC]">
-            <h3 className="text-xl font-bold text-[#0B1220] mb-3">Commercial Modeling Depth</h3>
-            <p className="text-slate-600 leading-relaxed text-sm">
-              Bottom-up pricing, not template pricing. Rate cards with onshore/offshore mix, FTE ramp modeling, transition costs, and full Total Contract Value (TCV) calculation.
-            </p>
-          </div>
-          <div className="p-8 rounded-2xl border border-slate-200 hover:border-[#1E40AF]/30 transition-colors bg-[#F8FAFC]">
-            <h3 className="text-xl font-bold text-[#0B1220] mb-3">Delivery Planning</h3>
-            <p className="text-slate-600 leading-relaxed text-sm">
-              Turns RFP requirements into user stories with acceptance criteria, packs them into capacity-constrained sprints based on team composition, and exports a full design document.
-            </p>
+
+          {/* Right: Screenshot */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#1E40AF]/20 to-[#0EA5E9]/20 rounded-2xl blur-2xl transform scale-95" />
+            <div className="relative bg-[#0B1220] rounded-2xl border border-slate-700 shadow-2xl overflow-hidden group">
+              <div className="bg-[#1E293B] px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                <div className="w-3 h-3 rounded-full bg-red-400/80"></div>
+                <div className="w-3 h-3 rounded-full bg-amber-400/80"></div>
+                <div className="w-3 h-3 rounded-full bg-emerald-400/80"></div>
+                <div className="ml-4 bg-[#0B1220] text-xs text-slate-400 px-4 py-1 rounded-md flex-1 border border-slate-700 text-center">
+                  app.capivuetech.com/deal-room
+                </div>
+              </div>
+              <div className="aspect-video relative overflow-hidden bg-slate-900">
+                <Image src="/screenshots/Deal_Room_Dark.png" alt="Deal Room Analytics" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 5-STEP WORKFLOW */}
+      {/* 2. EXECUTIVE METRICS STRIP */}
+      <section className="border-y border-slate-200 bg-white py-12 relative z-20">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-200 text-center">
+          <div className="flex flex-col items-center justify-center pt-4 md:pt-0 px-4">
+            <span className="text-3xl font-extrabold text-[#1E40AF] tracking-tight mb-2">100%</span>
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Requirement Traceability</span>
+          </div>
+          <div className="flex flex-col items-center justify-center pt-4 md:pt-0 px-4">
+            <span className="text-3xl font-extrabold text-[#1E40AF] tracking-tight mb-2">&lt; 45 Min</span>
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">To Go/No-Go Decision</span>
+          </div>
+          <div className="flex flex-col items-center justify-center pt-4 md:pt-0 px-4">
+            <span className="text-3xl font-extrabold text-[#1E40AF] tracking-tight mb-2">Zero</span>
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Hallucinated Proof</span>
+          </div>
+          <div className="flex flex-col items-center justify-center pt-4 md:pt-0 px-4">
+            <span className="text-3xl font-extrabold text-[#1E40AF] tracking-tight mb-2">100%</span>
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Data Sovereignty</span>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. THE CORE ENGINE (4 PILLARS) */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
+          <div className="text-xs font-bold text-[#0EA5E9] uppercase tracking-wider mb-3">The Capivue Platform</div>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0B1220] mb-4">
-            From RFP to signed contract.
+            Four engines. One unified bid lifecycle.
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            A guided workflow that mirrors exactly what your team sees inside the platform.
+            Stop stitching together fragile Excel trackers, Word drafts, and email threads. Capivue connects commercial, legal, and delivery intelligence in a single workspace.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-4">
-          {[
-            { step: "01", title: "Discover", desc: "Ingest the RFP and map requirements." },
-            { step: "02", title: "Evaluate", desc: "Score the bid and decide if it's worth pursuing." },
-            { step: "03", title: "Draft", desc: "Generate evidence-backed responses." },
-            { step: "04", title: "Plan", desc: "Model commercial pricing and delivery." },
-            { step: "05", title: "Deliver", desc: "Export review-ready deliverables." }
-          ].map((item, i) => (
-            <div key={i} className="relative p-6 bg-white border border-slate-200 rounded-xl">
-              <span className="text-4xl font-extrabold text-slate-100 absolute top-4 right-4">{item.step}</span>
-              <h4 className="text-lg font-bold text-[#1E40AF] mb-2 relative z-10">{item.title}</h4>
-              <p className="text-sm text-slate-600 relative z-10">{item.desc}</p>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Risk X-Ray */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+            <div className="p-8 pb-0">
+              <div className="text-[#1E40AF] font-bold text-sm tracking-wider uppercase mb-2">Risk X-Ray</div>
+              <h3 className="text-2xl font-bold text-[#0B1220] mb-3">Surface deal-breaker clauses before you commit.</h3>
+              <p className="text-slate-600 mb-6 text-sm leading-relaxed">Ingest complex PDFs, scanned schedules, and multi-sheet Excel workbooks. Capivue audits every requirement across eight legal, regulatory, and technical dimensions—flagging automatic disqualification triggers and generating a deduplicated Assumptions Register.</p>
+              <Link href="/platform/risk-xray" className="text-[#1E40AF] font-semibold text-sm hover:underline mb-6 inline-block">Explore Risk X-Ray →</Link>
             </div>
-          ))}
+            <div className="mt-auto border-t border-slate-100 bg-[#0B1220] relative aspect-[16/9]">
+               <Image src="/screenshots/Risk_xray.jpg" alt="Risk X-Ray" fill className="object-cover object-top" />
+            </div>
+          </div>
+
+          {/* Deal Room */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+            <div className="p-8 pb-0">
+              <div className="text-[#1E40AF] font-bold text-sm tracking-wider uppercase mb-2">Deal Room</div>
+              <h3 className="text-2xl font-bold text-[#0B1220] mb-3">Price complex deliveries with CFO-grade precision.</h3>
+              <p className="text-slate-600 mb-6 text-sm leading-relaxed">Translate requirement complexity into phased effort estimates across Discovery, Build, SIT, UAT, and Hypercare. Apply custom onshore/offshore blended rate cards, automatic QA and governance overheads, and risk contingency buffers to lock in target margins.</p>
+              <Link href="/platform/deal-room" className="text-[#1E40AF] font-semibold text-sm hover:underline mb-6 inline-block">Explore Deal Room →</Link>
+            </div>
+            <div className="mt-auto border-t border-slate-100 bg-[#0B1220] relative aspect-[16/9]">
+               <Image src="/screenshots/commercial_planner.jpg" alt="Deal Room" fill className="object-cover object-top" />
+            </div>
+          </div>
+
+          {/* Sprint Planner */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+            <div className="p-8 pb-0">
+              <div className="text-[#1E40AF] font-bold text-sm tracking-wider uppercase mb-2">Sprint Planner</div>
+              <h3 className="text-2xl font-bold text-[#0B1220] mb-3">Turn bid promises into realistic sprint capacity.</h3>
+              <p className="text-slate-600 mb-6 text-sm leading-relaxed">Eliminate the friction between Sales and Delivery. Capivue converts estimated person-days into capacity-planned Agile sprints based on peak role FTEs—ensuring every proposed go-live date is backed by an executable engineering roadmap.</p>
+              <Link href="/platform/sprint-planner" className="text-[#1E40AF] font-semibold text-sm hover:underline mb-6 inline-block">Explore Sprint Planner →</Link>
+            </div>
+            <div className="mt-auto border-t border-slate-100 bg-[#0B1220] relative aspect-[16/9]">
+               <Image src="/screenshots/Sprint_planner2.jpg" alt="Sprint Planner" fill className="object-cover object-top" />
+            </div>
+          </div>
+
+          {/* Proposal Studio */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+            <div className="p-8 pb-0">
+              <div className="text-[#1E40AF] font-bold text-sm tracking-wider uppercase mb-2">Grounded Proposal Studio</div>
+              <h3 className="text-2xl font-bold text-[#0B1220] mb-3">Draft with authority. Cite every claim.</h3>
+              <p className="text-slate-600 mb-6 text-sm leading-relaxed">Lock narrative generation to an executive-approved Win Strategy Blueprint. Capivue synthesizes your past wins, compliance certifications, and reference architectures into submission-ready Word documents—with inline source citations on every section.</p>
+              <Link href="/solutions/proposal-intelligence" className="text-[#1E40AF] font-semibold text-sm hover:underline mb-6 inline-block">Explore Proposal Studio →</Link>
+            </div>
+            <div className="mt-auto border-t border-slate-100 bg-[#0B1220] relative aspect-[16/9]">
+               <Image src="/screenshots/Section_Editor_with_Citations_dark.jpg" alt="Proposal Studio" fill className="object-cover object-top" />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* 4. INDUSTRY BENCHMARKS (CASE STUDIES) */}
       <section className="py-24 px-6 bg-white border-y border-slate-200">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-          <div>
-            <p className="text-xl text-slate-800 font-medium leading-relaxed italic mb-6">
-              "We used to spend two days deciding if an RFP was worth bidding on. Now we make that call in 15 minutes, and we only chase the deals we can actually win."
-            </p>
-            <div className="text-sm font-bold text-[#0B1220]">Head of Bid Management</div>
-            <div className="text-sm text-slate-500">IT Services Firm</div>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-xs font-bold text-[#0EA5E9] uppercase tracking-wider mb-3">Industry Benchmarks</div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0B1220] mb-4">
+              Engineered for complex, regulated bids.
+            </h2>
           </div>
-          <div>
-            <p className="text-xl text-slate-800 font-medium leading-relaxed italic mb-6">
-              "Capivue turned a blank page into a 70% draft in minutes. My team now spends their time refining strategy instead of hunting for past case studies."
-            </p>
-            <div className="text-sm font-bold text-[#0B1220]">Pre-Sales Director</div>
-            <div className="text-sm text-slate-500">Global Consultancy</div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 bg-[#F8FAFC] rounded-2xl border border-slate-200 flex flex-col">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">IT Services & System Integrators</div>
+              <h3 className="text-xl font-bold text-[#0B1220] mb-4">Compress delivery estimation by over 80%.</h3>
+              <p className="text-sm text-slate-600 mb-6 flex-grow leading-relaxed">Map 250+ page turnkey transformation RFPs into phased FTE allocations, 2-week sprint plans, and multi-document submission packs without manual spreadsheet rework.</p>
+              <Link href="/solutions/it-services" className="text-[#1E40AF] font-semibold text-sm hover:underline">View IT Services Architecture →</Link>
+            </div>
+            
+            <div className="p-8 bg-[#F8FAFC] rounded-2xl border border-slate-200 flex flex-col">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">BFSI & Regulated Infrastructure</div>
+              <h3 className="text-xl font-bold text-[#0B1220] mb-4">Enforce zero-defect regulatory compliance.</h3>
+              <p className="text-sm text-slate-600 mb-6 flex-grow leading-relaxed">Automatically cross-check RBI, DPDP Act, and PCI-DSS mandates against your verified compliance profile—isolating hidden operational liabilities before submission.</p>
+              <Link href="/solutions/it-services" className="text-[#1E40AF] font-semibold text-sm hover:underline">View BFSI Governance →</Link>
+            </div>
+
+            <div className="p-8 bg-[#F8FAFC] rounded-2xl border border-slate-200 flex flex-col">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Management & Strategy Consulting</div>
+              <h3 className="text-xl font-bold text-[#0B1220] mb-4">Protect partner margins on fixed-fee engagements.</h3>
+              <p className="text-sm text-slate-600 mb-6 flex-grow leading-relaxed">Align executive win themes, commercial contingencies, and stakeholder talking points in one governed workspace before senior partners review the bid.</p>
+              <Link href="/solutions/consulting" className="text-[#1E40AF] font-semibold text-sm hover:underline">View Consulting Workflow →</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CLOSING CTA */}
-      <section className="bg-[#0B1220] py-24 px-6 text-center">
+      {/* 5. SECURITY & GOVERNANCE */}
+      <section className="py-24 px-6 bg-[#0B1220]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-xs font-bold text-[#0EA5E9] uppercase tracking-wider mb-3">Security & Compliance</div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">
+              Built for your CISO's toughest diligence review.
+            </h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              Your bid data, rate cards, and intellectual property represent your sharpest competitive edge. Capivue enforces strict cryptographic and architectural isolation at every layer.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-[#1E293B]/50 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="font-bold text-white mb-2">Database-Level Tenant Isolation</h3>
+              <p className="text-sm text-slate-400">Enforced via PostgreSQL Row-Level Security (RLS) so workspace data is mathematically isolated at the query engine level.</p>
+            </div>
+            <div className="bg-[#1E293B]/50 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="font-bold text-white mb-2">Zero Data Retention AI</h3>
+              <p className="text-sm text-slate-400">Inference runs over TLS 1.2+ with contractual zero-retention guarantees—or directly inside your private Azure OpenAI / Vertex AI tenant via BYOK.</p>
+            </div>
+            <div className="bg-[#1E293B]/50 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="font-bold text-white mb-2">Regional Data Residency</h3>
+              <p className="text-sm text-slate-400">Hosted on Microsoft Azure Central India (Pune) to support strict Indian data localization mandates, with dedicated global regions for multinational enterprises.</p>
+            </div>
+            <div className="bg-[#1E293B]/50 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="font-bold text-white mb-2">Compliance & Identity</h3>
+              <p className="text-sm text-slate-400">Native Microsoft Entra ID (SSO), AES-256 encryption at rest, CSA STAR Level 1 transparency, and active SOC 2 Type II readiness (targeting Q3 2027).</p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link href="/security" className="inline-block bg-white text-[#0B1220] px-8 py-3 rounded-lg font-medium hover:bg-slate-100 transition-colors">
+              Visit the Trust Center
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. INTEGRATIONS */}
+      <section className="py-24 px-6 bg-[#F8FAFC]">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-[#0B1220] mb-4">Native to the Enterprise Stack</h2>
+          <p className="text-slate-600 mb-12 max-w-2xl mx-auto">Ingest capability documents, route SME approvals, and sync deal milestones without forcing teams out of their daily tools.</p>
+          
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="bg-white p-6 rounded-xl border border-slate-200">
+              <h4 className="font-bold text-[#0B1220] mb-2">Microsoft Entra ID</h4>
+              <p className="text-xs text-slate-500">Enterprise Single Sign-On and role-based access governance.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-slate-200">
+              <h4 className="font-bold text-[#0B1220] mb-2">SharePoint & OneDrive</h4>
+              <p className="text-xs text-slate-500">Automated ingestion of past proposals, compliance certificates, and case studies.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-slate-200">
+              <h4 className="font-bold text-[#0B1220] mb-2">Microsoft Teams</h4>
+              <p className="text-xs text-slate-500">Interactive Adaptive Cards that let SMEs review and sign off directly in chat.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-slate-200">
+              <h4 className="font-bold text-[#0B1220] mb-2">Salesforce</h4>
+              <p className="text-xs text-slate-500">Bidirectional sync between CRM opportunity stages and live bid readiness.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-slate-200 md:col-span-2">
+              <h4 className="font-bold text-[#0B1220] mb-2">Custom REST & Webhooks</h4>
+              <p className="text-xs text-slate-500">Event-driven extensibility for internal ERP and deal-desk workflows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. CLOSING BANNER */}
+      <section className="bg-[#0B1220] py-24 px-6 text-center border-t border-slate-800">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6">
-            See Capivue on your next bid.
+            Stop bidding on guesswork. Start winning with intelligence.
           </h2>
           <p className="text-xl text-slate-400 mb-10">
-            Stop writing from scratch. Start winning with strategy.
+            See how Capivue transforms your next complex RFP from intake to executive sign-off.
           </p>
-          <Link href="/request-demo" className="inline-block bg-[#0EA5E9] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-sky-400 transition-colors shadow-lg shadow-[#0EA5E9]/20">
-            Book a Demo
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/request-demo" className="bg-[#0EA5E9] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-sky-400 transition-colors shadow-lg shadow-[#0EA5E9]/20">
+              Book an Enterprise Demo
+            </Link>
+            <Link href="/pricing" className="bg-transparent border border-slate-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-800 transition-colors">
+              Start Free Pilot
+            </Link>
+          </div>
         </div>
       </section>
 
