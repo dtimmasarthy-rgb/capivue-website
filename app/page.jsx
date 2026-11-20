@@ -307,6 +307,7 @@ export default function Home() {
                 className="w-full h-full" 
                 controls 
                 autoPlay 
+                muted // <--- CRITICAL: Allows autoplay to work
                 playsInline
                 src="/capivue-demo.mp4" 
               >
