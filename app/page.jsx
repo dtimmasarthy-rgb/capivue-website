@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <div className="flex flex-col bg-[#F8FAFC]">
       
@@ -30,7 +35,10 @@ export default function Home() {
               <Link href="/request-demo" className="bg-[#1E40AF] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-900 transition-all shadow-lg shadow-[#1E40AF]/20 text-center">
                 Request Enterprise Demo
               </Link>
-              <button className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+              <button 
+                onClick={() => setIsVideoOpen(true)}
+                className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
+              >
                 <svg className="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                 Explore Walkthrough
               </button>
@@ -277,6 +285,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 8. VIDEO LIGHTBOX MODAL */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-900/90 backdrop-blur-sm animate-in fade-in duration-200">
+          {/* Click outside to close */}
+          <div className="absolute inset-0" onClick={() => setIsVideoOpen(false)}></div>
+          
+          <div className="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl border border-slate-700 animate-in zoom-in-95 duration-200">
+            {/* Close Button */}
+            <button 
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full backdrop-blur-md transition-all"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+
+            {/* The Video */}
+            <div className="aspect-video bg-black flex items-center justify-center">
+              <video 
+                className="w-full h-full" 
+                controls 
+                autoPlay 
+                playsInline
+                src="/capivue-demo.mp4" 
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
