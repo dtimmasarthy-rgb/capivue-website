@@ -150,6 +150,9 @@ export default function TermsOfService() {
                   <li>
                     <strong className="text-[#0B1220]">Security Architecture:</strong> Capivue maintains administrative, technical, and physical safeguards as detailed in our Security & Trust Center, including Microsoft Azure Central India (Pune) hosting, PostgreSQL Row-Level Security (RLS), TLS 1.2/1.3 encryption in transit, AES-256 encryption at rest, and Fernet symmetric encryption for integration credentials.
                   </li>
+                  <li>
+                    <strong className="text-[#0B1220]">Audit Trail Custody Policy:</strong> Tamper-proof system audit logs capturing every AI extraction, user edit, and assumption override are retained securely and provided exclusively by authorized Capivue Superadmins upon verified customer request. End-users cannot silently alter, delete, or export sensitive audit logs; this chain-of-custody model ensures log integrity for internal compliance reviews and client-facing security audits.
+                  </li>
                 </ul>
               </div>
 

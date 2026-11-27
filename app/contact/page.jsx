@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    topic: "Enterprise Platform Demo & Pilot Scoping",
+    topic: "Book a 15-Minute Live Walkthrough",
     name: "",
     email: "",
     company: "",
@@ -63,11 +63,10 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-slate-200 text-sm text-[#0B1220] focus:outline-none focus:border-[#1E40AF] focus:ring-1 focus:ring-[#1E40AF] transition-all appearance-none bg-white"
                   >
-                    <option value="Enterprise Platform Demo & Pilot Scoping">Enterprise Platform Demo & Pilot Scoping</option>
-                    <option value="Security, CISO Diligence & DPA Request">Security, CISO Diligence & DPA Request</option>
-                    <option value="Commercial & Enterprise Pricing (BYOK / White-Label)">Commercial & Enterprise Pricing (BYOK / White-Label)</option>
-                    <option value="Partner & Advisory Ecosystem">Partner & Advisory Ecosystem</option>
-                    <option value="General & Press Inquiries">General & Press Inquiries</option>
+                    <option value="Book a 15-Minute Live Walkthrough">Book a 15-Minute Live Walkthrough</option>
+                    <option value="Join the Founding Customer / Pilot Program">Join the Founding Customer / Pilot Program</option>
+                    <option value="Request CISO Security Package / Audit Log Sample">Request CISO Security Package / Audit Log Sample</option>
+                    <option value="General / Partnership Inquiry">General / Partnership Inquiry</option>
                   </select>
                 </div>
 
@@ -147,6 +146,10 @@ export default function Contact() {
                   <p className="text-center text-[11px] text-slate-500 mt-4 flex items-center justify-center gap-1.5">
                     <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                     Protected by TLS 1.3 encryption. We never share your contact details or send unsolicited marketing.
+                  </p>
+                  {/* NEW FOUNDER REASSURANCE LINE */}
+                  <p className="text-center text-sm font-semibold text-[#0B1220] mt-4 pt-4 border-t border-slate-100">
+                    You'll hear directly from our founding engineering and solutions team within 4 business hours—no automated SDR sequences.
                   </p>
                 </div>
               </form>

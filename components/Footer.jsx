@@ -58,7 +58,6 @@ export default function Footer() {
             <li><Link href="/solutions/it-services" className="hover:text-white transition-colors">IT Services & SIs</Link></li>
             <li><Link href="/solutions/managed-services" className="hover:text-white transition-colors">Managed Services (AMS)</Link></li>
             <li><Link href="/solutions/consulting" className="hover:text-white transition-colors">Management Consulting</Link></li>
-            <li><Link href="/solutions/bfsi" className="hover:text-white transition-colors">BFSI</Link></li>
             <li className="pt-2"><Link href="/solutions/bid-managers" className="hover:text-white transition-colors text-slate-400">For Bid Directors</Link></li>
             <li><Link href="/solutions/cfo-deal-desk" className="hover:text-white transition-colors text-slate-400">For CFOs & Deal Desk</Link></li>
             <li><Link href="/solutions/solution-architects" className="hover:text-white transition-colors text-slate-400">For Solution Architects</Link></li>
@@ -96,17 +95,21 @@ export default function Footer() {
 
       </div>
 
-      {/* BOTTOM TIER: LEGAL & SOVEREIGNTY BAR */}
-      <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <div>
-          © 2026 Capivue Solutions Pvt Ltd. All rights reserved.
+      {/* Bottom Bar */}
+      <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col items-center justify-between gap-4 text-xs text-slate-500 md:flex-row">
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+          <span>© 2026 Capivue Solutions Pvt Ltd. All rights reserved.</span>
         </div>
-        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-center md:text-left">
-          <span>Registered in India (Hyderabad)</span>
-          <span className="hidden md:inline">•</span>
-          <span>Central India Data Residency (Pune)</span>
-          <span className="hidden md:inline">•</span>
-          <a href="mailto:contact@capivuetech.com" className="hover:text-slate-300 transition-colors">contact@capivuetech.com</a>
+        
+        {/* New Enterprise Trust Strip */}
+        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 font-medium">
+          <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> Hosted on Azure Central India</span>
+          <span className="hidden md:inline text-slate-700">|</span>
+          <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> PostgreSQL RLS</span>
+          <span className="hidden md:inline text-slate-700">|</span>
+          <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> Zero-Retention AI</span>
+          <span className="hidden md:inline text-slate-700">|</span>
+          <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> Full Audit Trail & Logs</span>
         </div>
       </div>
     </footer>

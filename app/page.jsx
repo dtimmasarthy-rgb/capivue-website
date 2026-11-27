@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ROIComparison from "../components/ROIComparison";
+import HomeFAQ from "../components/HomeFAQ";
 
 export default function Home() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -33,14 +35,14 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Link href="/request-demo" className="bg-[#1E40AF] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-900 transition-all shadow-lg shadow-[#1E40AF]/20 text-center">
-                Request Enterprise Demo
+                Book a 15-Min Walkthrough
               </Link>
               <button 
                 onClick={() => setIsVideoOpen(true)}
                 className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5 text-[#1E40AF]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                Explore Walkthrough
+                Watch Demo
               </button>
             </div>
             {/* Micro-Trust Line */}
@@ -92,6 +94,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 2.5 ROI COMPARISON TABLE */}
+      <ROIComparison />
 
       {/* 3. THE CORE ENGINE (4 PILLARS) */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
@@ -223,7 +228,7 @@ export default function Home() {
             </div>
             <div className="bg-[#1E293B]/50 p-6 rounded-xl border border-slate-700/50">
               <h3 className="font-bold text-white mb-2">Compliance & Identity</h3>
-              <p className="text-sm text-slate-400">Native Microsoft Entra ID (SSO), AES-256 encryption at rest, CSA STAR Level 1 transparency, and active SOC 2 Type II readiness (targeting Q3 2027).</p>
+              <p className="text-sm text-slate-400">Native Microsoft Entra ID (SSO), AES-256 encryption at rest, CSA STAR Level 1 transparency, and active SOC 2 Type I readiness with Type II audit targeted for Q2 2027.</p>
             </div>
           </div>
 
@@ -266,6 +271,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 6.5 BUILT-IN GOVERNANCE, AUDIT TRAIL & MONITORING */}
+      <section className="py-24 px-6 bg-white border-y border-slate-200">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-xs font-bold text-[#0EA5E9] uppercase tracking-wider mb-3">Enterprise Governance</div>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0B1220] mb-4">
+              Built-in governance, audit trail & monitoring.
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Because you can't win an enterprise deal without proving how the AI arrived at its conclusion.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 bg-[#F8FAFC] rounded-2xl border border-slate-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-[#1E40AF]">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <h3 className="text-xl font-bold text-[#0B1220] mb-3">Complete Action Audit Trail</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">Every AI extraction, user edit, and assumption override is timestamped and permanently logged. You know exactly who changed what and when.</p>
+            </div>
+            
+            <div className="p-8 bg-[#F8FAFC] rounded-2xl border border-slate-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-[#1E40AF]">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+              </div>
+              <h3 className="text-xl font-bold text-[#0B1220] mb-3">Verified Audit Log Reports (On Request)</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">Tamper-proof audit logs are securely retained and generated exclusively by Capivue Superadmins upon authorized customer request—ensuring strict chain-of-custody for internal compliance reviews or client security audits.</p>
+            </div>
+
+            <div className="p-8 bg-[#F8FAFC] rounded-2xl border border-slate-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-[#1E40AF]">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              </div>
+              <h3 className="text-xl font-bold text-[#0B1220] mb-3">Real-Time System Monitoring</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">Continuous visibility into data access patterns and strict tenant isolation. Every query is mathematically sandboxed by PostgreSQL RLS.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6.6 FOUNDING CUSTOMER / PILOT PROGRAM */}
+      <section className="py-24 px-6 bg-[#F8FAFC]">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-[#0B1220] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#0EA5E9]/20 rounded-full blur-[80px] pointer-events-none" />
+            
+            <div className="relative z-10 max-w-xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
+                Founding Customer Program
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Looking for 5 Founding Bid Teams.
+              </h2>
+              <p className="text-slate-300 leading-relaxed mb-6">
+                We are partnering closely with a small cohort of early-adopter teams. Get hands-on white-glove onboarding, custom RFP template setup, and locked-in early-adopter pricing for your first year.
+              </p>
+              <div className="flex gap-4 text-sm text-slate-400">
+                <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> White-glove onboarding</span>
+                <span className="flex items-center gap-1"><span className="text-[#0EA5E9]">✓</span> Locked-in pricing</span>
+              </div>
+            </div>
+
+            <div className="relative z-10 shrink-0 w-full md:w-auto">
+              <Link href="/request-demo" className="block w-full text-center bg-[#0EA5E9] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-sky-400 transition-colors shadow-lg shadow-[#0EA5E9]/20">
+                Apply for the Pilot →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6.7 OBJECTION-BUSTING FAQ */}
+      <HomeFAQ />
+
       {/* 7. CLOSING BANNER */}
       <section className="bg-[#0B1220] py-24 px-6 text-center border-t border-slate-800">
         <div className="max-w-3xl mx-auto">
@@ -277,7 +357,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/request-demo" className="bg-[#0EA5E9] text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-sky-400 transition-colors shadow-lg shadow-[#0EA5E9]/20">
-              Book an Enterprise Demo
+              Book a 15-Min Walkthrough
             </Link>
             <Link href="/pricing" className="bg-transparent border border-slate-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-slate-800 transition-colors">
               Start Free Pilot

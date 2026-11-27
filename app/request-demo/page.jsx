@@ -54,13 +54,12 @@ export default function RequestDemo() {
             Enterprise Demo & Pilot Scoping
           </div>
           
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
-            See Capivue audit, price, and draft a complex requirement document live.
-          </h1>
-          
-          <p className="text-lg text-slate-400 leading-relaxed mb-12">
-            Schedule a tailored 30-minute walkthrough with our solutions engineering team. Bring a real or sample RFP, Statement of Work (SOW), or technical specification—and watch Capivue extract obligations, flag compliance traps, and model delivery margins in real time.
-          </p>
+        <h1 className="text-3xl font-extrabold tracking-tight text-[#0B1220] mb-2">
+          Book a 15-Min Walkthrough
+        </h1>
+        <p className="text-slate-600 mb-8 text-sm">
+          See how Capivue turns your next RFP into a financial model and a sprint plan. No heavy sales deck. Just a quick, technical walkthrough.
+        </p>
 
           <div className="mb-12">
             <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">
@@ -234,7 +233,7 @@ export default function RequestDemo() {
                   type="submit"
                   className="w-full bg-[#1E40AF] text-white px-6 py-3.5 rounded-lg text-base font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-[#1E40AF]/20"
                 >
-                  Request Enterprise Demo →
+                  Book Walkthrough →
                 </button>
                 <p className="text-center text-[11px] text-slate-500 mt-4 flex items-center justify-center gap-1.5">
                   <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
