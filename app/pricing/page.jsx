@@ -23,7 +23,7 @@ export default function Pricing() {
     {
       name: "Starter",
       monthly: 720,
-      annual: 8640,
+      annual: 7200,
       desc: "For small bid teams running regular pursuits.",
       cta: "Start Trial",
       highlight: false,
@@ -39,7 +39,7 @@ export default function Pricing() {
     {
       name: "Professional",
       monthly: 1800,
-      annual: 21600,
+      annual: 18000,
       desc: "For active revenue and delivery teams running complex pursuits.",
       cta: "Start Trial",
       highlight: true,
